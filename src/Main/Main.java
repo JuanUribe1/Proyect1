@@ -4,7 +4,6 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("too easy");
         Persona estudiante = new Persona();
         estudiante.setNombre(JOptionPane.showInputDialog("Ingrese su nombre"));
         estudiante.setApellidos(JOptionPane.showInputDialog("Ingrese su apellido"));
@@ -12,6 +11,13 @@ public class Main {
         estudiante.setCorreo(JOptionPane.showInputDialog("Ingrese su correo electronico"));
         estudiante.setPais(JOptionPane.showInputDialog("Ingrese su pais de residencia"));
         estudiante.setEdad(JOptionPane.showInputDialog("Ingrese su Edad"));
+        JOptionPane.showMessageDialog(null, "Datos del estudiante" +
+                "\nNombre: "+estudiante.getNombre()+
+                "\nApellido: "+estudiante.getApellidos()+
+                "\nID: "+ estudiante.getID()+
+                "\nCorreo: "+estudiante.getCorreo()+
+                "\nPais: "+estudiante.getPais()+
+                "\nEdad: "+estudiante.getEdad());
 
         System.out.println(estudiante.getNombre()+" "+estudiante.getApellidos()+" "+ estudiante.getID()+" "+estudiante.getCorreo()+" "+estudiante.getPais()+" "+estudiante.getEdad());
     }
